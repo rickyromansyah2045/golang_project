@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-const PORT = ":8080"
+const PORT = ":8001"
 
 type Status struct {
 	Water int `json:"water"`
@@ -29,13 +29,13 @@ type Weather struct {
 }
 
 func main() {
-	http.HandleFunc("/", action)
+	http.HandleFunc("/", Action)
 
 	log.Println("Server started at port", PORT)
 	http.ListenAndServe(PORT, nil)
 }
 
-func action(w http.ResponseWriter, r *http.Request) {
+func Action(w http.ResponseWriter, r *http.Request) {
 	var randomValue DataJSON
 	max := 100
 	min := 1

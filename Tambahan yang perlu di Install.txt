@@ -1,0 +1,9 @@
+go get -u gorm.io/gorm
+
+go get -u gorm.io/driver/postgres
+
+kalau error koneksi masalah db coba cek hidup belum dan dbName nya harus dbname
+
+go get -u github.com/gin-gonic/gin 
+
+CRUD pake gin dan gorm
